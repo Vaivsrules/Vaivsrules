@@ -1,0 +1,32 @@
+{
+  "name": "my-simple-project",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "7",
+      "INSTALL_NODE": "true",
+      "NODE_VERSION": "lts/*"
+    }
+  },
+  "containerEnv": {
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
+    "GITHUB_USER": "${localEnv:GITHUB_USER}"
+  },
+  "runArgs": ["--name=my-simple-project"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "editor.tabSize": 4
+  },
+  "extensions": [
+    "bmewburn.vscode-intelephense-client",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "felixfbecker.php-debug",
+    "ikappas.phpcs",
+    "ms-azuretools.vscode-docker",
+    "timonwong.shellcheck",
+    "tyriar.sort-lines"
+  ]
+}
